@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<title>Gözlük Tavsiye Sistemi</title>
+</head>
+<body>
+
+<div class="container mt-5">
+	<center><h1>Gözlük Tavsiye Sistemi v1</h1></center>
+	<hr>
+	{% if (newUser is defined) or (error is defined) %}
+		{% if error is defined %}
+			<div class="alert alert-danger" role="alert">
+			  {{error}}
+			</div>
+		{% else %}
+			<div class="alert alert-success" role="alert">
+			  Kaydınız başarıyla gerçekleştirildi, tebrikler
+			</div>
+		{% endif %}
+	{% endif %}
+	<h2 class="mt-5">Giriş Yap</h2>
+	<hr>
+	<form action="/login" method="post">
+	  <div class="form-group">
+	    <label for="exampleInputEmail1">Kullanıcı Adı</label>
+	    <input type="text" name="username" class="form-control" placeholder="Kullanıcı Adı">
+	  </div>
+	  <div class="form-group">
+	    <label for="exampleInputPassword1">Şifre</label>
+	    <input type="password" name="password" class="form-control" placeholder="Şifre">
+	  </div>
+	  <button type="submit" class="btn btn-primary">Giriş Yap</button>
+	</form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

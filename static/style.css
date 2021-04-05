@@ -1,0 +1,150 @@
+.carousel-control-prev-icon {
+ 	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+ 	 background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.top-links{
+    color:#5c378e !important; 
+    text-decoration: none !important;
+}
+
+.card-img-top{
+    transition: .5s ease;
+}
+
+.img-box {
+  position: relative;
+  width: 100%;
+}
+
+.img-box img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.img-box:hover > .overlay {
+  opacity: 1;
+  cursor: pointer;  
+}
+
+.img-box:hover > .card-img-top{
+  opacity: 0;
+  cursor: pointer;  
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.tooltip-inner {
+    max-width: 390px;
+    /* If max-width does not work, try using width instead */
+    width: 390px; 
+}
+
+.brandImg{
+    max-width:100%; 
+    height:60px;
+}
+
+.root{
+    margin-right:0px !important;
+    margin-left:0px !important;
+}
+
+.brandImg2{
+    max-width: 100%; 
+    height:50px; 
+    margin-bottom:10px;
+}
+
+.slideImg{
+    margin: 0 auto;
+}
+
+.card-300{
+    width:300px;
+}
+
+.pagination-margin-left{
+    margin-left:2.8rem !important;
+}
+
+@media only screen and (max-width: 1200px) {
+ .filter-products {
+    display:none;
+  } 
+}
+
+.radio-box{
+    display:inline-block !important;
+    margin-right:10px;" 
+}
+
+.rating {
+  float:left;
+}
+
+.rating > input{
+    visibility: hidden;
+}
+
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+    float:right;
+    width:1em;
+    /* padding:0 .1em; */
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:200%;
+    /* line-height:1.2; */
+    color:#ddd;
+}
+
+.rating:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rating > input:checked ~ label {
+    color: dodgerblue;
+    
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: dodgerblue;
+    
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: dodgerblue;
+    
+}
+
+.rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+	<title>Gözlük Tavsiye Sistemi</title>
+</head>
+<body>
+
+<div class="container mt-5">
+	<center><h1>Gözlük Tavsiye Sistemi v1</h1></center>
+	<hr>
+	{% if error is defined %}
+		<div class="alert alert-danger" role="alert">
+		  {{error}}
+		</div>
+	{% endif %}
+	<h2 class="mt-5">Üye Ol</h2>
+	<hr>
+	<form action="/register" method="post">
+	  <div class="form-group">
+	    <label for="usernameLabel">Kullanıcı Adı</label>
+	    <input type="text" name="username" class="form-control" placeholder="Kullanıcı Adı">
+	  </div>
+	  <div class="form-group">
+	    <label for="passwordLabel">Şifre</label>
+	    <input type="password" name="password" class="form-control" placeholder="Şifre">
+	  </div>
+	  <label class="mb-3" for="genderLabel">Cinsiyet</label><br />
+	  <div class="custom-control custom-radio radio-box">
+		  <input class="custom-control-input" type="radio" name="gender" id="gender1" value="Erkek">
+		  <label class="custom-control-label" for="gender1">Erkek</label>
+		</div>
+		<div class="custom-control custom-radio radio-box">
+		  <input class="custom-control-input" type="radio" name="gender" id="gender2" value="Kadın">
+		  <label class="custom-control-label" for="gender2">Kadın</label>
+		</div><br /><br />
+	  <label class="mb-3" for="genderLabel">Yüz Tipi</label><br />
+	  	<a data-toggle="tooltip" title="<img src='https://stn-atasun.mncdn.com/Content/img/e1.jpg' />">
+	  	<div class="custom-control custom-radio radio-box">	  	
+		  <input class="custom-control-input" type="radio" name="faceType" id="facetype1" value="Kalp">
+		  <label class="custom-control-label" for="facetype1">Kalp</label>
+		</div></a>
+		<a data-toggle="tooltip" title="<img src='https://stn-atasun.mncdn.com/Content/img/e2.jpg' />">
+		<div class="custom-control custom-radio radio-box">
+		  <input class="custom-control-input" type="radio" name="faceType" id="facetype2" value="Kare">
+		  <label class="custom-control-label" for="facetype2">Kare</label>
+		</div></a>
+		<a data-toggle="tooltip" title="<img src='https://stn-atasun.mncdn.com/Content/img/e3.jpg' />">
+		<div class="custom-control custom-radio radio-box">
+		  <input class="custom-control-input" type="radio" name="faceType" id="facetype3" value="Oval">
+		  <label class="custom-control-label" for="facetype3">Oval</label>
+		</div></a>
+		<a data-toggle="tooltip" title="<img src='https://stn-atasun.mncdn.com/Content/img/e4.jpg' />">
+		<div class="custom-control custom-radio radio-box">
+		  <input class="custom-control-input" type="radio" name="faceType" id="facetype4" value="Yuvarlak">
+		  <label class="custom-control-label" for="facetype4">Yuvarlak</label>
+		</div></a><br /><br />
+		 <button type="submit" class="btn btn-primary">Kayıt Ol</button>
+		 <br /><p class="mt-2">Zaten üyeyseniz <a href="/login">buradan</a> giriş yapabilirsiniz.</p>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script>
+	$('a[data-toggle="tooltip"]').tooltip({
+	    animated: 'fade',
+	    placement: 'bottom',
+	    html: true
+	});
+</script>
+</body>
+</html>
